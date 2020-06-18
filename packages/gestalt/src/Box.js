@@ -39,6 +39,7 @@ import {
   mapping,
   rangeWithoutZero,
 } from './transforms.js';
+import { getRoundingStyle } from './getRoundingClassName.js';
 
 /*
 
@@ -270,21 +271,6 @@ const transformNumberOrPassthrough = (selector: string) => (
 
   if (m === 'auto') {
     return fromClassName(whitespace[`${selector}Auto`]);
-  }
-
-  return identity();
-};
-const rounding = (r: Rounding): Style => {
-  if (typeof r === 'number') {
-    return bind(range('rounding'), borders)(r);
-  }
-
-  if (r === 'circle') {
-    return fromClassName(borders.circle);
-  }
-
-  if (r === 'pill') {
-    return fromClassName(borders.pill);
   }
 
   return identity();
@@ -636,7 +622,7 @@ const propToFn = {
     // default: static
   }),
   right: toggle(layout.right0),
-  rounding,
+  rounding: getRoundingStyle,
   top: toggle(layout.top0),
   width: width => fromInlineStyle({ width }),
   wrap: toggle(layout.flexWrap),
@@ -670,7 +656,7 @@ const omit = (keys, obj) =>
 // (className, style) or accessibility (onClick).
 const blacklistProps = ['onClick', 'className', 'style'];
 
-// $FlowIssue https://github.com/facebook/flow/issues/6103
+// $FlowFixMe[missing-annot]
 const Box = React.forwardRef(
   ({ children, ...props }: PropType, ref: React.ElementRef<*>) => {
     // Flow can't reason about the constant nature of Object.keys so we can't use
@@ -869,7 +855,7 @@ const SizeDisplayPropType = PropTypes.oneOf([
   'inlineBlock',
 ]);
 
-// $FlowIssue https://github.com/facebook/flow/issues/7484
+// $FlowFixMe[prop-missing]
 Box.propTypes = {
   children: PropTypes.node,
   dangerouslySetInlineStyle: PropTypes.exact({

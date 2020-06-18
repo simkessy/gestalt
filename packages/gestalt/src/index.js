@@ -41,12 +41,12 @@ import Switch from './Switch.js';
 // eslint-disable-next-line import/extensions
 import Table from './Table';
 import Tabs from './Tabs.js';
+import TapArea from './TapArea.js';
 import Text from './Text.js';
 import TextArea from './TextArea.js';
 import TextField from './TextField.js';
 import Toast from './Toast.js';
 import Tooltip from './Tooltip.js';
-import Touchable from './Touchable.js';
 import Video from './Video.js';
 
 export {
@@ -91,11 +91,11 @@ export {
   Switch,
   Table,
   Tabs,
+  TapArea,
   Text,
   TextArea,
   TextField,
   Toast,
   Tooltip,
-  Touchable,
   Video,
 };

@@ -67,17 +67,17 @@ type State = {|
 const requestFullscreen = (element: HTMLElement) => {
   if (element.requestFullscreen) {
     element.requestFullscreen();
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[prop-missing]
   } else if (element.webkitRequestFullscreen) {
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[not-a-function]
     element.webkitRequestFullscreen();
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[prop-missing]
   } else if (element.mozRequestFullScreen) {
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[not-a-function]
     element.mozRequestFullScreen();
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[prop-missing]
   } else if (element.msRequestFullscreen) {
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[not-a-function]
     element.msRequestFullscreen();
   }
 };
@@ -85,17 +85,17 @@ const requestFullscreen = (element: HTMLElement) => {
 const exitFullscreen = () => {
   if (document.exitFullscreen) {
     document.exitFullscreen();
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[prop-missing]
   } else if (document.webkitExitFullscreen) {
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[not-a-function]
     document.webkitExitFullscreen();
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[prop-missing]
   } else if (document.mozCancelFullScreen) {
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[not-a-function]
     document.mozCancelFullScreen();
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[prop-missing]
   } else if (document.msExitFullscreen) {
-    // $FlowIssue - vendor prefix missing from Flow
+    // $FlowFixMe[not-a-function]
     document.msExitFullscreen();
   }
 };
@@ -104,11 +104,11 @@ const exitFullscreen = () => {
 // have a vendor specific version so we must instead use the actual element
 const isFullscreen = () =>
   document.fullscreenElement ||
-  // $FlowIssue - vendor prefix missing from Flow
+  // $FlowFixMe[prop-missing]
   document.webkitFullscreenElement ||
-  // $FlowIssue - vendor prefix missing from Flow
+  // $FlowFixMe[prop-missing]
   document.mozFullScreenElement ||
-  // $FlowIssue - vendor prefix missing from Flow
+  // $FlowFixMe[prop-missing]
   document.msFullscreenElement;
 
 const addFullscreenEventListener = (listener: EventListener) => {
