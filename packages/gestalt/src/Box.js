@@ -163,7 +163,7 @@ type PropType = {
   alignItems?: AlignItems,
   alignSelf?: AlignSelf,
   bottom?: boolean,
-  borderSize?: 'sm' | 'md' | 'none',
+  borderSize?: 'sm' | 'lg' | 'none',
   color?:
     | 'blue'
     | 'darkGray'
@@ -712,6 +712,10 @@ const BoxWithRef: React.AbstractComponent<
   // And... magic!
   return <div {...omit(omitProps, props)} {...toProps(s)} ref={ref} />;
 });
+
+// This is a legacy backport around tools external to Gestalt (*waves hands*)
+// expecting Boxes' displayName to be just "Box" and not "ForwardRef(Box)".
+BoxWithRef.displayName = 'Box';
 
 export default BoxWithRef;
 

@@ -1,3 +1,81 @@
+## 5.30.1 (Jul 10, 2020)
+
+### Patch
+
+- ColorScheme: Set transparent colors in dark mode (#1042)
+
+## 5.30.0 (Jul 10, 2020)
+
+### Minor
+
+- Internal: Add CSS variables CI checks (#1041)
+
+## 5.29.1 (Jul 9, 2020)
+
+### Patch
+
+- Merge: Remove status-check=0 check (#1040)
+
+## 5.29.0 (Jul 9, 2020)
+
+### Minor
+
+- Colors: Adding #colorGray150 + hover colors, and replacing inline colors to standard color var names (#1034)
+
+## 5.28.5 (Jul 9, 2020)
+
+### Patch
+
+- Merge: Better titles and obey branch protections (#1035)
+
+## 5.28.4 (Jul 9, 2020)
+
+### Patch
+
+- Switch: Fix darkMode border colors by adhering to color scheme convention names (#1033)
+
+## 5.28.3 (Jul 9, 2020)
+
+### Patch
+
+- Colors: Update dark mode gray values to latest from design (#1030)
+
+## 5.28.2 (Jul 9, 2020)
+
+### Patch
+
+- Internal: Update Pull Request template (#988)
+
+## 5.28.1 (Jul 9, 2020)
+
+### Patch
+
+- Tabs: Fix indicator flowtype in docs (#1031)
+
+## 5.28.0 (Jul 9, 2020)
+
+### Minor
+
+- Box: Set display name #1028
+
+## 5.27.0 (Jul 9, 2020)
+
+### Minor
+
+- Box: fix flowtype for borderSize (#1026)
+
+## 5.26.1 (Jul 9, 2020)
+
+### Patch
+
+- Badge: set text color to always be white (#1022)
+
+## 5.26.0 (Jul 9, 2020)
+
+### Minor
+
+- Icon: add protect icon (#1024)
+
 ## 5.25.0 (Jul 9, 2020)
 
 ### Minor
@@ -32,7 +110,7 @@
 
 ### Patch
 
-- [Borders.css][DarkMode] Replaced naming in Borders.css to scheme standard (#978)
+- [Borders.css][darkmode] Replaced naming in Borders.css to scheme standard (#978)
 
 ## 5.24.2 (Jul 9, 2020)
 
@@ -314,7 +392,7 @@
 
 ### Major
 
-- SearchField: Convert to Functional and Add ForwardRef  (#926)
+- SearchField: Convert to Functional and Add ForwardRef (#926)
 
 ## 3.2.0 (Jun 16, 2020)
 

@@ -15,9 +15,14 @@ type Theme = {|
   colorGray0: string,
   colorGray50: string,
   colorGray100: string,
+  colorGray150: string,
   colorGray200: string,
   colorGray300: string,
   colorGray400: string,
+  colorTransparentGray60: string,
+  colorTransparentGray100: string,
+  colorTransparentDarkGray: string,
+  colorTransparentWhite: string,
 |};
 
 type Props = {|
@@ -33,21 +38,31 @@ const lightModeTheme = {
   colorGray0: '#fff',
   colorGray50: '#fff',
   colorGray100: '#efefef',
+  colorGray150: '#ddd',
   colorGray200: '#767676',
   colorGray300: '#111',
   colorGray400: '#000',
+  colorTransparentGray60: 'rgba(0, 0, 0, 0.06)',
+  colorTransparentGray100: 'rgba(0, 0, 0, 0.1)',
+  colorTransparentDarkGray: 'rgba(51, 51, 51, 0.8)',
+  colorTransparentWhite: 'rgba(255, 255, 255, 0.8)',
 };
 
 const darkModeTheme = {
   name: 'darkMode',
   colorRed0: '#e60023',
   colorRed100: '#ff5247',
-  colorGray0: '#050505',
-  colorGray50: '#272727',
-  colorGray100: '#494949',
-  colorGray200: '#b8b8b8',
+  colorGray0: '#030303',
+  colorGray50: '#212121',
+  colorGray100: '#404040',
+  colorGray150: '#585858',
+  colorGray200: '#ababab',
   colorGray300: '#efefef',
   colorGray400: '#fff',
+  colorTransparentGray60: 'rgba(255, 255, 255, 0.5)',
+  colorTransparentGray100: 'rgba(255, 255, 255, 0.5)',
+  colorTransparentDarkGray: 'rgba(255, 255, 255, 0.8)',
+  colorTransparentWhite: 'rgba(51, 51, 51, 0.8)',
 };
 
 const ThemeContext: React.Context<Theme> = React.createContext<Theme>(
